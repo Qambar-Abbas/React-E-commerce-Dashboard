@@ -48,5 +48,5 @@ project-root/
 
 | Dashboard overview | Orders table |
 |---:|:---|
-| <a href="./screenshots/screen1-full.png"><img src="./screenshots/screen1.png" alt="Dashboard overview" width="420" /></a> | <a href="./screenshots/screen2-full.png"><img src="./screenshots/screen2.png" alt="Orders table" width="420" /></a> |
+| <a href="./screenshots/1.png"><img src="./screenshots/1.png" alt="Dashboard overview" width="420" /></a> | <a href="./screenshots/2.png"><img src="./screenshots/2.png" alt="Orders table" width="420" /></a> |
 | *Figure 1 — Dashboard overview* | *Figure 2 — Orders table* |

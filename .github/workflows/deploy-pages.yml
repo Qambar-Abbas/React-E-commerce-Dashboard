@@ -1,5 +1,11 @@
 name: Deploy to GitHub Pages
 
+# Grant the workflow the minimal permissions it needs
+permissions:
+  contents: read      # allow checkout / read repo contents
+  pages: write        # allow Pages deployment
+  id-token: write     # required for OIDC token used by deploy-pages
+
 on:
   push:
     branches:

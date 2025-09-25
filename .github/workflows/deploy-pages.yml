@@ -25,14 +25,10 @@ jobs:
         env:
           CI: false
 
-      - name: Copy index.html to 404.html (SPA fallback)
-        run: cp dist/index.html dist/404.html
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v3
-
-      - name: Upload artifact (dist)
-        uses: actions/upload-pages-artifact@v1
+      - name: Upload static files as Pages artifact
+        id: deployment
+        # Use latest Pages uploader (v4 as of 2025). This packages & uploads the artifact correctly.
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./dist
 
@@ -41,4 +37,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
+        with:
+          # no inputs required for default behavior; the action will deploy the artifact uploaded in the build job
